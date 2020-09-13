@@ -1,31 +1,13 @@
-import React from "react";
-export default class App extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state={
-            c: 0
-        }
-    }
+import React from 'react'
+import {Provider} from 'react-redux'
+import store from './store/store'
+import Register from './Register'
 
-    handleMas = (event) =>{
-        this.setState({
-            c: this.state.c + 1
-        })
-    }
+export const App = () => {
 
-    handleMenos = (event) =>{
-        this.setState({
-            c: this.state.c - 1
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>count {this.props.counter}</h1>
-                <button onClick={this.props.increment}>+</button>
-                <button onClick={this.props.descrement}>-</button>
-            </div>
-        );
-    }
+    return (
+        <Provider store={store}>
+            <Register />
+        </Provider>
+    )
 }
