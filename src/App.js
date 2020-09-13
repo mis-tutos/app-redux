@@ -1,31 +1,15 @@
-import React from "react";
-export default class App extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state={
-            c: 0
-        }
-    }
+import React from 'react'
+import Form from './components/form/form'
+import Palabra from "./components/palabra/palabra";
 
-    handleMas = (event) =>{
-        this.setState({
-            c: this.state.c + 1
-        })
-    }
-
-    handleMenos = (event) =>{
-        this.setState({
-            c: this.state.c - 1
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>count {this.props.counter}</h1>
-                <button onClick={this.props.increment}>+</button>
-                <button onClick={this.props.descrement}>-</button>
-            </div>
-        );
-    }
+const App = () => {
+    return (
+        <div>
+            <h1>holaa</h1>
+            <Form/>
+            <Palabra/>
+        </div>
+    )
 }
+
+export default App
